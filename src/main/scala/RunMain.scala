@@ -6,7 +6,7 @@ object RunMain {
     val bw = new BufferedWriter(new FileWriter(file, true))
     val words = AllWordsFromElements.wordsFromElements
 
-    words.foreach(word => bw.write(word + "\n"))
+    words.foreach{case (word, elems) => bw.write(word + " : " + elems.map(_.name).mkString(", ")  + "\n")}
     bw.close();
   }
 }
