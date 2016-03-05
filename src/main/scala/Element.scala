@@ -1,5 +1,4 @@
 
-
 import scala.io.Source
 
 case class Element(symbol: String, name: String)

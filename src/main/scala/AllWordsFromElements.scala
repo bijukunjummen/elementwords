@@ -2,7 +2,7 @@ object AllWordsFromElements {
 
   def wordsFromElements = {
 
-    val elements = Element.elements
+    val elements = Element("", "") :: Element.elements
 
     val words = (for {
       el1 <- elements
@@ -13,12 +13,6 @@ object AllWordsFromElements {
       if (Dictionary.isRealWord(word))
     } yield (word))
 
-
-
-
-
-    
-
-    words
+    words.toSet
   }
 }
