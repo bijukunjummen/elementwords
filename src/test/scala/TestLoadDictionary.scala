@@ -1,5 +1,6 @@
 object TestLoadDictionary {
   def main(args: Array[String]): Unit = {
-    println(Dictionary.isRealWord("A"))
+    println(Dictionary.words.size)
+    println( Dictionary.isRealWord("Magic"))
   }
 }
